@@ -1,0 +1,91 @@
+//Recipe Code
+const enteredIngredients = [];
+    
+function addIngredient() {
+    const input = document.getElementById("ingredientInput");
+    const ingredient = input.value.trim().toLowerCase();
+    if (ingredient === "") {
+        alert("Please enter an ingredient.");
+        return;
+    }
+    enteredIngredients.push(ingredient);
+    input.value = "";
+    displayIngredients();
+}
+
+function removeIngredient(index) {
+    enteredIngredients.splice(index, 1);
+    displayIngredients();
+    searchRecipes();
+}
+
+function displayIngredients() {
+    const ingredientButtons = document.getElementById("ingredientButtons");
+    ingredientButtons.innerHTML = "";
+    enteredIngredients.forEach((ingredient, index) => {
+        const button = document.createElement("button");
+        button.textContent = ingredient;
+        button.onclick = () => removeIngredient(index);
+        ingredientButtons.appendChild(button);
+    });
+}
+
+async function searchRecipes() {
+    const input = document.getElementById("ingredientInput");
+    if(input.value.trim() !== "") addIngredient();
+    if (enteredIngredients.length === 0 ) {
+        alert("Please enter at least one ingredient.");
+        return;
+    }
+    const response = await fetch("recipes.json");
+    const recipes = await response.json();
+    const matchingRecipes = recipes.filter(recipe => enteredIngredients.every(ingredient => recipe.ingredients.some(ing => ing.toLowerCase().includes(ingredient))));
+    const recipeResults = document.getElementById("recipeResults");
+    recipeResults.innerHTML = ""; 
+    if (matchingRecipes.length === 0) {
+        recipeResults.textContent = "No recipes found containing the entered ingredients.";
+    } else {
+        matchingRecipes.forEach(recipe => {
+            const recipeDiv = document.createElement("div");
+            recipeDiv.classList.add("recipe");
+
+            const nameHeading = document.createElement("h2");
+            nameHeading.textContent = recipe.name;
+            recipeDiv.appendChild(nameHeading);
+
+            const ingredientsList = document.createElement("ul");
+            recipe.ingredients.forEach(ingredient => {
+                const ingredientItem = document.createElement("li");
+                ingredientItem.textContent = ingredient;
+                ingredientsList.appendChild(ingredientItem);
+            });
+            recipeDiv.appendChild(ingredientsList);
+
+            const instructionsPara = document.createElement("p");
+            instructionsPara.textContent = "Instructions: " + recipe.instructions;
+            recipeDiv.appendChild(instructionsPara);
+
+            recipeResults.appendChild(recipeDiv);
+        });
+    }
+}
+
+//Toggle light mode
+const lightModeToggle = document.getElementById('lightModeToggle');
+
+const isLightMode = localStorage.getItem('lightMode') === 'true';
+
+toggleLightMode(isLightMode);
+
+lightModeToggle.addEventListener('click', () => {
+    const newLightMode = document.body.classList.toggle('light-mode');
+    localStorage.setItem('lightMode', newLightMode);
+});
+
+function toggleLightMode(isLightMode) {
+    if (isLightMode) {
+        document.body.classList.add('light-mode');
+    } else {
+        document.body.classList.remove('light-mode');
+    }
+}
