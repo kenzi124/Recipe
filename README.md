@@ -15,7 +15,7 @@ Main page IDEA,       Making a Cook Book,
 able to insert the ingredients you have on hand, and search up avaiable recipe to make the dish.
 
 First Page
-items to be include(Search bar , ingreadient icon, list of ingradient added, search button, to be able to remove the specific ingredient, a click on icon to just                       search for a particular food name)
+items to be include(Search bar , ingreadient icon, list of ingradient added, search button, to be able to remove the specific ingredient, a click on icon to just search for a particular food name)
 -Search bar, search each ingreadient to be include
 -list of ingredient, to see what ingredient currently added
 -search button, search available 
