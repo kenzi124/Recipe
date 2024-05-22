@@ -1,37 +1,33 @@
 <?php
-
 require __DIR__ . '/../src/bootstrap.php';
 ?>
 
-<?php view('header', ['title' => '']) ?>
+<?php view('header', ['title' = '']) ?>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel ="stylesheet" href="light-mode.css">
+</head>
 
 <main>
     <form action="login.php" method="post">
         <h1>Register</h1>
         <div>
-            <label for="username">Username:</label>
-            <input type="text" name="username" id="username">
+            <label for="email">Email:</label>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required>
         </div>
 
         <div>
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password1">
-            <label for="password">RePassword:</label>
-            <input type="password" name="password" id="password2">
-            
-
+            <label for="pwd">Password:</label>
+            <input type="password" placeholder="Enter Password:" name="pwd" id="pwd" required>
+            <label for="pwd2">Re-enter Password:</label>
+            <input type="password" placeholder="Re-enter Password:" name="pwd2" id="pwd2" required>
         </div>
 
         <section>
-            <button id="Create" class="float-left submit-button" >Create</button>
-
-        <script type="text/javascript">
-            document.getElementById("Create").onclick = function () 
-            {
-                location.href = login.html;
-            }; 
-        </script>
-            
+            <button type="submit" class="float-left submit-button">Create</button>
+        </section>
     </form>
 </main>
+
 <?php view('footer') ?>
