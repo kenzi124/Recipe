@@ -23,7 +23,14 @@ require __DIR__ . '/../src/bootstrap.php';
         </div>
 
         <section>
-            <button type="submit">Create</button>
+            <button id="Create" class="float-left submit-button" >Create</button>
+
+        <script type="text/javascript">
+            document.getElementById("Create").onclick = function () 
+            {
+                location.href = login.html;
+            }; 
+        </script>
             
     </form>
 </main>
