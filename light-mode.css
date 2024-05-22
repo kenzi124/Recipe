@@ -1,0 +1,14 @@
+body.light-mode {
+    background-color: #f4f4f4;
+    color: black
+}
+
+.light-mode main{
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode input[type="text"],
+.light-mode input[type="password"]{
+    background-color: #fff;
+}
