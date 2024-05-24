@@ -1,26 +1,26 @@
 ______________________________________________________________________________________________________________________________________________
-Make the database for user login to store user input
+Make the database for user login to store user input                                                              Work on Progress, G
 ______________________________________________________________________________________________________________________________________________
-Login page username and password need to add condition
+Login page username and password need to add condition                                                            Work on Progress, Dani
   - check if the user input have any match with the database
     -if yes, login into the cook book recipe page
     -if no, show message error indicating (incorrect username and password)
 
-Condition can be added into Login page/script.js/ file
+Condition can be added into Login page/script.js/
 ______________________________________________________________________________________________________________________________________________
 Register page password and re-enter password need to add condition
   - check if the password and re-enter password is the same or not
     - if yes, direct back login page
     - if no, show message error indicating (password and re-enter password is not the same)
 
-Condition can be added into Login page/script.js/ file
+Condition can be added into Login page/script.js/
 ______________________________________________________________________________________________________________________________________________
 Make the cook book recipe using the "TheMealDB.api"
   - Make a button to switch mode between ingredient recipe mode and food recipe mode
     - recipe mode, able to add any ingredient you currently available and search for the recipe
     - food recipe mode, just enter the name of the food than it will return the recipe of the food
 ______________________________________________________________________________________________________________________________________________
-Make the cook book recipe using the "TheMealDB.api"
+Make the cook book recipe using the "TheMealDB.api"                                                              Work on Progress, Wen
   - Make a code that will let you know which ingredient you are still missing
   - seperate the available ingrediant and missing ingredient
 
