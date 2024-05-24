@@ -36,8 +36,15 @@ Improve Register Page UI
 ______________________________________________________________________________________________________________________________________________
 Improve Recipe Book Page UI
 ______________________________________________________________________________________________________________________________________________
-
-
+Design of each food after clicking in
+______________________________________________________________________________________________________________________________________________
+Make the cook book recipe using the "TheMealDB.api"
+  - Use the Api to pull the image of the Food back along with the ingredient list
+______________________________________________________________________________________________________________________________________________
+Make the cook book recipe using the "TheMealDB.api"
+  - Current problem = id meal (Food name return back as id meal)
+    - index.php code line 81, Fix it so that it return back the food name instead of id meal
+______________________________________________________________________________________________________________________________________________
 
 
 
