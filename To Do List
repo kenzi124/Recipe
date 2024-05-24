@@ -1,7 +1,7 @@
 ______________________________________________________________________________________________________________________________________________
-Make the database for user login to store user input                                                              Work on Progress, G
+Make the database for user login to store user input                                                              Work in Progress, G
 ______________________________________________________________________________________________________________________________________________
-Login page username and password need to add condition                                                            Work on Progress, Dani
+Login page username and password need to add condition                                                            Work in Progress, Dani
   - check if the user input have any match with the database
     -if yes, login into the cook book recipe page
     -if no, show message error indicating (incorrect username and password)
@@ -20,7 +20,7 @@ Make the cook book recipe using the "TheMealDB.api"
     - recipe mode, able to add any ingredient you currently available and search for the recipe
     - food recipe mode, just enter the name of the food than it will return the recipe of the food
 ______________________________________________________________________________________________________________________________________________
-Make the cook book recipe using the "TheMealDB.api"                                                              Work on Progress, Wen
+Make the cook book recipe using the "TheMealDB.api"                                                              Work in Progress, Wen
   - Make a code that will let you know which ingredient you are still missing
   - seperate the available ingrediant and missing ingredient
 
