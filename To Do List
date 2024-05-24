@@ -8,7 +8,7 @@ Login page username and password need to add condition                          
 
 Condition can be added into Login page/script.js/
 ______________________________________________________________________________________________________________________________________________
-Register page password and re-enter password need to add condition
+Register page password and re-enter password need to add condition                                                 Work in Progress, Sandra
   - check if the password and re-enter password is the same or not
     - if yes, direct back login page
     - if no, show message error indicating (password and re-enter password is not the same)
