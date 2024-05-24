@@ -1,11 +1,14 @@
 <?php 
 $api_key = '1';
 $categories = fetchCategories();
+$enteredIngredients=array();
+$userIngredients=[];
 ?>
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     <label for="search">Enter ingredients (separated by commas):</label>
-    <input type="text" id="search" name="search" list="searchList"><br><br>
+    <input type="text" id="search" name="search" list="searchList">
+    <button type="submit">Search</button>
     <datalist id="searchList"> 
         <?php 
         foreach($categories as $outIng) {
@@ -13,10 +16,43 @@ $categories = fetchCategories();
         }
         ?>
     </datalist>
-    <button type="submit">Search</button>
+    <div id="ingredientButtons"></div>
 </form>
 
+<script>
+    function removeButton(buttonId) {
+        var button = document.getElementById(buttonId);
+        button.parentNode.removeChild(button);
+    }
+</script>
+
 <?php 
+
+function addIngredient() {
+    global $enteredIngredients, $categories;
+    $userIngredient = isset($_POST["search"]) ? $_POST["search"]: '';
+    if ($userIngredient === "") {
+        echo "Please enter an ingredient.";
+        return;
+    } else if (in_array(strtolower($userIngredient), array_map('strtolower', $categories))) {
+        echo "<p>Search term '$userIngredient' found!</p>";
+        array_push($enteredIngredients, $userIngredient);
+        displayIngredients();
+        fetchRecipesByIngredient($userIngredient);
+    } else {
+        echo "<p>Search term '$userIngredient' not found! Please select from the list.</p>";
+        return;
+    }
+}
+
+function displayIngredients() {
+    global $enteredIngredients;
+    foreach($enteredIngredients as $index => $name) {
+        echo '<button id="button' . $index . '" onclick="removeButton(\'button' . $index . '\')">' . $name . '</button>';
+    }
+    echo "<br>";
+}
+
 function fetchCategories() {
     global $api_key;
     $url = "https://www.themealdb.com/api/json/v1/{$api_key}/list.php?i=list";
@@ -40,14 +76,13 @@ function fetchCategories() {
 
 function printIngredients($ings, $recipeIng, $id){
     if (isArraySubset($ings, $recipeIng)) {
-        $recipe = array();
         echo "Ingredients for idMeal {$id}: <br>";
-        foreach($recipeIng as $ingre){
+        foreach($ings as $ingre){
             echo "$ingre <br>";
         }
+        printMissingIngredients($ings, $recipeIng);
         echo "<br>";
     }
-    return $recipe;
 }
 
 function isArraySubset($array1, $array2) {
@@ -88,18 +123,17 @@ function printMissingIngredients($userIngredients, $recipeIngredients){
     }
 }
 
-function fetchRecipesByIngredient($ing, $ings) {
-    global $api_key;
+function fetchRecipesByIngredient($ing) {
+    global $api_key, $enteredIngredients;
     $url = "https://www.themealdb.com/api/json/v1/{$api_key}/filter.php?i={$ing}";
     $response = file_get_contents($url);
     if ($response) {
         $data = json_decode($response, true);
         if (isset($data['meals']) && !empty($data['meals'])) {
-            $recipes = array();
             foreach ($data['meals'] as $recipe) {
                 $idMeal = $recipe['idMeal'];
                 $recipeIngredients = fetchIngredientsByIdMeal($idMeal);
-                array_push($recipes, printIngredients($ings, $recipeIngredients, $idMeal));
+                printIngredients($enteredIngredients, $recipeIngredients, $idMeal);
             }
         } else {
             echo "No recipes found for the given ingredient.";
@@ -138,17 +172,7 @@ function fetchIngredientsByIdMeal($idMeal) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $inputIngredients = isset($_POST["search"]) ? $_POST["search"]: '';
-    $ingredients = explode(',', $inputIngredients);
-    $ingredients = array_map('trim', $ingredients);
-    foreach($ingredients as $ingredient) {
-        if(in_array(strtolower($ingredient), array_map('strtolower', $categories))) {
-            echo "<p>Search term '$ingredient' found!</p>";
-        } else {
-            echo "<p>Search term '$ingredient' not found! Please select from the list.</p>";
-        }
-        fetchRecipesByIngredient($ingredient, $ingredients);
-    }
+    addIngredient();
 }
 
 ?>
