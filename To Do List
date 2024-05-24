@@ -8,7 +8,7 @@ Login page username and password need to add condition                          
 
 Condition can be added into Login page/script.js/
 ______________________________________________________________________________________________________________________________________________
-Register page password and re-enter password need to add condition                                                 Work in Progress, Sandra
+Register page password and re-enter password need to add condition                                                Work in Progress, Sandra
   - check if the password and re-enter password is the same or not
     - if yes, direct back login page
     - if no, show message error indicating (password and re-enter password is not the same)
@@ -45,12 +45,37 @@ Make the cook book recipe using the "TheMealDB.api"
   - Current problem = id meal (Food name return back as id meal)
     - index.php code line 81, Fix it so that it return back the food name instead of id meal
 ______________________________________________________________________________________________________________________________________________
+Create Login Page                                                                                                Status: COMPLETED
+  - Indicate this is a login page
+  - include username name input
+    - add name inside the username input
+  - include password input
+    - add name inside the username input
+  - add a "Login" button
+    - button on click, direct it into the cook book recipe
+  - add "Register"
+    - on click, direct it into the register page
 
-
-
-
-
-
+______________________________________________________________________________________________________________________________________________
+Create Register Page                                                                                             Status: COMPLETED
+  - Indicate this is a register page
+  - include email input
+    - add name inside the email input
+  - include password input
+    - add name inside the username input
+  - include re-enter password input
+    - add name inside the re-enter password input
+  - add a "Create" button
+    - button on click, direct it into the log in page
+  - add "Alreadt Create an Account? Sign in."
+    - on click, direct it back to login page
+______________________________________________________________________________________________________________________________________________
+Make the cook book recipe using the "TheMealDB.api"                                                              Status: COMPLETED
+  - Create the cook book page using "TheMealDB.api"
+______________________________________________________________________________________________________________________________________________
+Add Dark themes                                                                                                  Status: COMPLETED
+  - include the option to change the themes of the page from white to black
+______________________________________________________________________________________________________________________________________________
 
 
 
