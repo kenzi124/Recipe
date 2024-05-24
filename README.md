@@ -41,7 +41,10 @@ step by step instruction on how to make the recipe
 
 ______________________________________________________________________________________________________________________________________________________________________
 
-for the 
+Making of the recipe cook book
+-main objective is to take information about the recipe from a third party source and send it back.
+-reorganize all the information fetch from the third party source.
+
 
 
 
