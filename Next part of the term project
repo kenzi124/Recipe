@@ -1,2 +1,17 @@
-next part of the project would be featuring the more in-depth login and registration systems. 
-we are going login data bank that would remember every user's customization and personal pages that other user in the system can use and subscribe
+May 10
+-create the basic structure for the project
+-create a login page
+
+May 17
+- Finishing the login, register page
+- continuing the database for user login
+- Finishing designing the login,register page
+- Adding dark themes
+- continuing adding condition for the login page to fetch data from the database to check if the user input match the database to login.
+- continuing adding condition for register page to check if the password and re-enter password match or not, if not return message(the password doesn't match)
+- attempting to make the cook book recipe
+- success attempt to use "TheMealDB.api"
+- continuing to make missing ingredient from the ingredient you input ,to let you see what ingreadient you missing
+- trying to fix the find ingredient to type on the top
+
+May 24
