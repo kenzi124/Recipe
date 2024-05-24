@@ -20,7 +20,7 @@ items to be include(Search bar , ingreadient icon, list of ingradient added, sea
 -list of ingredient, to see what ingredient currently added
 -search button, search available 
 -remove the specific ingredient
--a click on icon to just search for a particular food name(like a switch mode )
+-a click on icon to just search for a particular food name(like a switch mode)
 
 Second Page
 items to be include(show available food recipe, food photo, button page to previous page, serach button to add more ingredient into the list, search button, to be 
@@ -29,3 +29,35 @@ items to be include(show available food recipe, food photo, button page to previ
 -show available fod recipe, list of food recipe
 -food photo, photo of each availble of food recipe
 -button to previous page, back to first page
+-serach button to add more ingredient into the list. has the option to add more ingredient into the search
+-search button, search available
+-remove specific ingredient
+-a click on icon to just search for a particular food name(like a switch mode)
+
+Third Page (after clicking onto a recipe you want to see)
+Photo of the recipe
+sets of ingredient require to make the recipe
+step by step instruction on how to make the recipe
+
+______________________________________________________________________________________________________________________________________________________________________
+
+for the 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
