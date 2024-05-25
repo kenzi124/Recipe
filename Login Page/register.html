@@ -10,7 +10,7 @@ require __DIR__ . '/../src/bootstrap.php';
 </head>
 
 <main>
-    <form action="login.php" method="post">
+    <form id="registerForm" action="login.php" method="post">
         <h1>Register</h1>
         <div>
             <label for="email">Email:</label>
@@ -23,12 +23,13 @@ require __DIR__ . '/../src/bootstrap.php';
             <label for="pwd2">Re-enter Password:</label>
             <input type="password" placeholder="Re-enter Password:" name="pwd2" id="pwd2" required>
         </div>
-
+        <div id="error-message" style="color:red; display:none;">Passwords do not match!</div>
         <section>
-            <button onclick="window.location.href='login.html'">Create</button>
+            <button type="button" id="registerButton">Create</button>
             <p>Already have an account? <a href="login.html">Sign in</a>.</p>
         </section>
     </form>
 </main>
+<script src="script.js"></script>
 
 <?php view('footer') ?>
