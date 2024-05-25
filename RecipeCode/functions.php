@@ -55,8 +55,9 @@ function fetchRecipesByIngredient($ing, $enteredIngredients) {
         if (isset($data['meals']) && !empty($data['meals'])) {
             foreach ($data['meals'] as $recipe) {
                 $idMeal = $recipe['idMeal'];
-                $recipeIngredients = fetchIngredientsByIdMeal($idMeal);
-                printIngredients($enteredIngredients, $recipeIngredients, $idMeal);
+                $recipe = fetchIngredientsByIdMeal($idMeal);
+                $name = $recipe[1];
+                printIngredients($enteredIngredients, $recipe[0], $idMeal, $name);
             }
         } else {
             echo "No recipes found for the given ingredient.";
@@ -81,7 +82,8 @@ function fetchIngredientsByIdMeal($idMeal) {
                     }
                 }
             }
-            return $ings;
+            $name = $meal['strMeal'];
+            return [$ings, $name];
         } else {
             echo "No meal found for idMeal {$idMeal}.";
         }
@@ -91,9 +93,9 @@ function fetchIngredientsByIdMeal($idMeal) {
     return NULL;
 }
 
-function printIngredients($ings, $recipeIng, $id) {
+function printIngredients($ings, $recipeIng, $id, $name) {
     if (isArraySubset($ings, $recipeIng)) {
-        echo "Ingredients for idMeal {$id}: <br>";
+        echo "Ingredients for idMeal {$id} {$name}: <br>";
         foreach($ings as $ingre){
             echo "$ingre <br>";
         }
