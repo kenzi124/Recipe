@@ -1,5 +1,5 @@
 _________________________________________________________________________________________________________________________________________________________________________________________________________________
-Create Login Page (Step 1)                                                                                         Status: COMPLETED, Contributor:Kenzi,G,Wen
+Create Login Page (Step 1)                                                                                         Status: COMPLETED, Contributor:Kenzi,G,Wen,Dani
   - Indicate this is a login page
   - include username name input
     - add name inside the username input
@@ -47,7 +47,7 @@ Create Register Page (Step 1)                                                   
   - add "Alreadt Create an Account? Sign in."
     - on click, direct it back to login page
 _________________________________________________________________________________________________________________________________________________________________________________________________________________
-Create Register Page (Step 2)                                                                                     Work in Progress, Sandra
+Create Register Page (Step 2)                                                                                     Status: COMPLETED, Contributor:Kenzi,G,Wen,Dani
 
 Register page password and re-enter password need to add condition                                                
   - check if the password and re-enter password is the same or not
