@@ -1,5 +1,5 @@
 _________________________________________________________________________________________________________________________________________________________________________________________________________________
-Create Login Page (Step 1)                                                                                         Status: COMPLETED, Contributor:Kenzi,G,Wen,Dani
+Create Login Page (Step 1)                                                                                         Status: COMPLETED
   - Indicate this is a login page
   - include username name input
     - add name inside the username input
@@ -25,7 +25,7 @@ Create Login Page (Step 3)                                                      
 Make the database for user login to check user input from the databse
   - Connect the databse to the login page                                                              
 _________________________________________________________________________________________________________________________________________________________________________________________________________________
-Create Login Page (Step 4)                                                                                        Status: COMPLETED, Contributor:Dani
+Create Login Page (Step 4)                                                                                        Status: COMPLETED
 
 Improve Login Page UI
 _________________________________________________________________________________________________________________________________________________________________________________________________________________
@@ -34,7 +34,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 _________________________________________________________________________________________________________________________________________________________________________________________________________________
-Create Register Page (Step 1)                                                                                     Status: COMPLETED, Contributor:Kenzi,G,Wen,Dani
+Create Register Page (Step 1)                                                                                     Status: COMPLETED
   - Indicate this is a register page
   - include email input
     - add name inside the email input
@@ -70,7 +70,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 _________________________________________________________________________________________________________________________________________________________________________________________________________________
-Make the Cook Book page (step 1)                                                                                 Status: COMPLETED, Contributor:Wen
+Make the Cook Book page (step 1)                                                                                 Status: COMPLETED
 
 Make the cook book recipe using the "TheMealDB.api"
   - Create the cook book page using "TheMealDB.api"
@@ -134,7 +134,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 _________________________________________________________________________________________________________________________________________________________________________________________________________________
-Additional Function                                                                                                 Status: COMPLETED, Contributor:Wen
+Additional Function                                                                                                 Status: COMPLETED
 
 Add Dark themes                                                                                                 
   - include the option to change the themes of the page from white to black
