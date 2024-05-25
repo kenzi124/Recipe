@@ -82,6 +82,13 @@ Make the cook book recipe using the "TheMealDB.api"
   - seperate the available ingrediant and missing ingredient
 
 _________________________________________________________________________________________________________________________________________________________________________________________________________________
+Make the Cook Book page (Improved)                                                                               Status: COMPLETED
+
+Search bar
+  - when first letter type in A, all the ingrediant that starts with A will show
+  - when all ingredient show, add a scroll function to see all the ingredient with the key word search
+
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
 Make the Cook Book page (Problem to fix)
 
 Fix the latency by using mySQL to retrieve the data and store in there
@@ -93,16 +100,17 @@ Make the Cook Book page (Problem to fix)
 Make the cook book recipe using the "TheMealDB.api"
   - current problem = after searching for the ingredient the search bar is at the bottom
     - Fix it, make it stay on top
+    - Fic it, ingredient button stay on top
 
 _________________________________________________________________________________________________________________________________________________________________________________________________________________
-Make the Cook Book page (Problem to fix)
+Make the Cook Book page (Problem to fix)                                                                        Status: COMPLETED
 
 Make the cook book recipe using the "TheMealDB.api"
   - Current problem = id meal (Food name return back as id meal)
     - index.php code line 81, Fix it so that it return back the food name instead of id meal
     
 _________________________________________________________________________________________________________________________________________________________________________________________________________________
-Make the Cook Book page (step 3)
+Make the Cook Book page (Improved)                                                                               Status: COMPLETED
 
 Make the cook book recipe using the "TheMealDB.api"
   - Need a function in which the user's input of ingredients is displayed as a button
