@@ -15,7 +15,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action'])) {
     <script src="script.js"></script>
 </head>
 <body>
-
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
     <label for="search">Enter ingredients:</label>
     <input type="text" id="search" name="search" list="searchList">
