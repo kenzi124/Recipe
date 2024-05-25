@@ -1,5 +1,5 @@
-___________________________________________________________________________________________________________________________________________________________
-Create Login Page (Step 1)                                                                                         Status: COMPLETED
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
+Create Login Page (Step 1)                                                                                         Status: COMPLETED, Contributor:Kenzi,G,Wen
   - Indicate this is a login page
   - include username name input
     - add name inside the username input
@@ -10,7 +10,7 @@ Create Login Page (Step 1)                                                      
   - add "Register"
     - on click, direct it into the register page
 
-___________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
 Create Login Page (Step 2)                                                                                        Work in Progress, Dani
 
 Login page username and password need to add condition                                                            
@@ -19,21 +19,21 @@ Login page username and password need to add condition
     -if no, show message error indicating (incorrect username and password)
 
 Conditions can be added into Login page/script.js/
-___________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
 Create Login Page (Step 3)                                                                                        Work in Progress, G
 
 Make the database for user login to check user input from the databse
   - Connect the databse to the login page                                                              
-___________________________________________________________________________________________________________________________________________________________
-Create Login Page (Step 4)                                                                                        Done, Dani
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
+Create Login Page (Step 4)                                                                                        Status: COMPLETED, Contributor:Dani
 
 Improve Login Page UI
-___________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-___________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
 Create Register Page (Step 1)                                                                                     Status: COMPLETED
   - Indicate this is a register page
   - include email input
@@ -46,7 +46,7 @@ Create Register Page (Step 1)                                                   
     - button on click, direct it into the log in page
   - add "Alreadt Create an Account? Sign in."
     - on click, direct it back to login page
-___________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
 Create Register Page (Step 2)                                                                                     Work in Progress, Sandra
 
 Register page password and re-enter password need to add condition                                                
@@ -55,90 +55,90 @@ Register page password and re-enter password need to add condition
     - if no, show message error indicating (password and re-enter password is not the same)
 
 Conditions can be added into Login page/script.js/
-___________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
 Create Register Page (Step 3)                                                                                                
 
 Make the database for user register page to store user input to the database
   - Connect the databse to the register page                                                            
-___________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
 Create Register Page (Step 4)                                                                                      
 
 Improve Register Page UI
-___________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-___________________________________________________________________________________________________________________________________________________________
-Make the Cook Book page (step 1)                                                                                 Status: COMPLETED
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
+Make the Cook Book page (step 1)                                                                                 Status: COMPLETED, Contributor:Wen
 
 Make the cook book recipe using the "TheMealDB.api"
   - Create the cook book page using "TheMealDB.api"
-___________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
 Make the Cook Book page (step 2)                                                                                 Status: COMPLETED, Debugging:Wen
 
 Make the cook book recipe using the "TheMealDB.api"
   - Make a code that will let you know which ingredient you are still missing
   - seperate the available ingrediant and missing ingredient
 
-___________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
 Make the Cook Book page (Problem to fix)
 
 Fix the latency by using mySQL to retrieve the data and store in there
   - Then the PHP would get the data from the mySQL file so the response time would be more faster
 
-___________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
 Make the Cook Book page (Problem to fix)
 
 Make the cook book recipe using the "TheMealDB.api"
   - current problem = after searching for the ingredient the search bar is at the bottom
     - Fix it, make it stay on top
 
-___________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
 Make the Cook Book page (Problem to fix)
 
 Make the cook book recipe using the "TheMealDB.api"
   - Current problem = id meal (Food name return back as id meal)
     - index.php code line 81, Fix it so that it return back the food name instead of id meal
     
-___________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
 Make the Cook Book page (step 3)
 
 Make the cook book recipe using the "TheMealDB.api"
   - Need a function in which the user's input of ingredients is displayed as a button
     - When button on click, the ingredient on their search of recipe will be remove
 
-___________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
 Make the Cook Book page (step 4)
 
 Make the cook book recipe using the "TheMealDB.api"
   - Make a button to switch mode between ingredient recipe mode and food recipe mode
     - recipe mode, able to add any ingredient you currently available and search for the recipe
     - food recipe mode, just enter the name of the food than it will return the recipe of the food
-___________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
 Make the Cook Book page (step 5)
 
 Make the cook book recipe using the "TheMealDB.api"
   - Use the Api to pull the image of the Food back along with the ingredient list
-___________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
 Make the Cook Book page (step 6)
 
 Improve Recipe Book Page UI
-___________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
 Make the Cook Book page (step 7)
 
 UI of each food after clicking in
-___________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-___________________________________________________________________________________________________________________________________________________________
-Additional Function                                                                                                 Status: COMPLETED
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
+Additional Function                                                                                                 Status: COMPLETED, Contributor:Wen
 
 Add Dark themes                                                                                                 
   - include the option to change the themes of the page from white to black
-___________________________________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 
 
