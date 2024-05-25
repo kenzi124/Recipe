@@ -2,7 +2,10 @@
 include 'functions.php';
 $categories = fetchCategories();
 $enteredIngredients = isset($_POST['enteredIngredients']) ? json_decode($_POST['enteredIngredients'], true) : [];
-include 'process.php';
+if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] == 'addIngredient') {
+    addIngredient($enteredIngredients, $categories);
+}
+if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] == 'removeIngredient') removeIngredient($enteredIngredients);
 ?>
 
 <!DOCTYPE html>
@@ -35,10 +38,17 @@ include 'process.php';
         ?>
     </div>
 
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] == 'searchRecipes') {
+        fetchRecipes($enteredIngredients);
+    }
+    ?>
     <form method="post" id="removeIngredientForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <input type="hidden" name="action" value="removeIngredient">
         <input type="hidden" id="removedIngredient" name="removedIngredient" value="">
         <input type="hidden" name="enteredIngredients" value="<?php echo htmlspecialchars(json_encode($enteredIngredients)); ?>">
     </form>
+    <?php
+    ?>
 </body>
 </html>
