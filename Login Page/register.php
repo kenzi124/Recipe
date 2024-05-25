@@ -24,35 +24,38 @@ view('header', ['title' => 'Register']);
 ?>
 
 <head>
-    <title>Register</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="light-mode.css">
 </head>
 
+<body>
 <main>
-    <form action="register.php" method="post">
-        <h1>Register</h1>
+    <form action="login.php" method="post">
+        <h1>Login</h1>
         <div>
-            <label for="email">Email:</label>
-            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
         </div>
-
         <div>
-            <label for="pwd">Password:</label>
-            <input type="password" placeholder="Enter Password:" name="pwd" id="pwd" required>
-            <label for="pwd2">Re-enter Password:</label>
-            <input type="password" placeholder="Re-enter Password:" name="pwd2" id="pwd2" required>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
         </div>
-
-        <?php if (isset($error_message)) : ?>
-            <p style="color: red;"><?= $error_message ?></p>
-        <?php endif; ?>
-
-        <section>
-            <button type="submit">Create</button>
-            <p>Already have an account? <a href="login.html">Sign in</a>.</p>
-        </section>
+        <br>
+        <button type="submit">Login</button>
+        <br>
+        <a href="https://gifdb.com/images/high/that-s-crazy-damn-bro-0qrzc1wo0rpyzwq2.gif">Forgot your password?</a>
+        <br>
+        <br>
+        <a href="register.php">Register</a>
+        <br>
+        <br>
+        <button id="lightModeToggle" class="btn">Light Mode</button>
     </form>
+    <script src="script.js"></script>
 </main>
+</body>
 
 <?php view('footer'); ?>
