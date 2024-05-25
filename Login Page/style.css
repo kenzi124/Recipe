@@ -39,8 +39,8 @@ input[type="text"]{
     padding: 4px;
     border-radius: 4px;
     border: 2px solid #555;
-    background-color: gray;
-    color: #fff;
+    background-color: #EFECDF;
+    color: white;
     width: 100%;
 }
 
@@ -48,8 +48,8 @@ input[type="password"]{
     padding: 4px;
     border-radius: 4px;
     border: 2px solid #555;
-    background-color: gray;
-    color: #fff;
+    background-color: #EFECDF;
+    color: white;
     width: 100%;
 }
 
@@ -68,7 +68,7 @@ button {
 }
 
 button:hover {
-    background-color: red;
+    background-color: black;
     font-family: Comic Sans MS;
 }
 
