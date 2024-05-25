@@ -1,5 +1,6 @@
 <?php
 require __DIR__ . '/../src/bootstrap.php';
+//'/../src/bootstrap.php'
 
 session_start();
 
