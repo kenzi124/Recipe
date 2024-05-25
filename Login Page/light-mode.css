@@ -13,7 +13,7 @@ body.light-mode {
     background-color: #CAFFC2;
 }
 
-button {
+.light-mode button {
     display: inline-block;
     flex-direction: row;
     width: 130px;
@@ -27,13 +27,13 @@ button {
     transition: background-color 0.3s;
 }
 
-button:hover {
+.light-mode button:hover {
     background-color: red;
     font-family: Comic Sans MS;
 }
 
 
-a {
+.light-mode a {
     text-decoration: none;
     font-weight: bold;
     color: #CAAFF1;
@@ -43,7 +43,7 @@ a {
     font-family: Times New Roman;
 }
 
-a:hover {
+.light-mode a:hover {
     text-decoration: underline;
     color: darkblue;
     font-family: Comic Sans MS;
