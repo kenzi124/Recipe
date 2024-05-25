@@ -95,7 +95,7 @@ Fix the latency by using mySQL to retrieve the data and store in there
   - Then the PHP would get the data from the mySQL file so the response time would be more faster
 
 _________________________________________________________________________________________________________________________________________________________________________________________________________________
-Make the Cook Book page (Problem to fix)
+Make the Cook Book page (Problem to fix)                                                                        Status: COMPLETED
 
 Make the cook book recipe using the "TheMealDB.api"
   - current problem = after searching for the ingredient the search bar is at the bottom
