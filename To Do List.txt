@@ -36,8 +36,8 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 _________________________________________________________________________________________________________________________________________________________________________________________________________________
 Create Register Page (Step 1)                                                                                     Status: COMPLETED
   - Indicate this is a register page
-  - include email input
-    - add name inside the email input
+  - include username input
+    - add name inside the username input
   - include password input
     - add name inside the username input
   - include re-enter password input
