@@ -56,7 +56,7 @@ Register page password and re-enter password need to add condition
 
 Conditions can be added into Login page/script.js/
 _________________________________________________________________________________________________________________________________________________________________________________________________________________
-Create Register Page (Step 3)                                                                                     
+Create Register Page (Step 3)                                                                                     Work in Progress, Tuyana
 
 Make the database for user register page to store user input to the database
   - Connect the databse to the register page                                                            
