@@ -1,0 +1,27 @@
+HOW TO ENABLE YOUR COMPUTER TO RUN PHP PROGRAM
+1. Find the PHP directory
+
+2. Open ext folder
+  - copy the path
+
+3. Open php.ini-production
+
+4. Search for "extension=openssl"
+Modify
+;extension=openssl  =>  extension=openssl
+
+5. Search for extension_dir
+Modify
+;On windows:            =>  ;On windows:
+;extension_dir = "ext"  =>  extension_dir = "Paste the path you copy in step 2"
+
+6. Saved the file than rename the file
+From:                   To:
+php.ini-production  =>  php.ini
+
+7. Restart VScode
+  - type in terminal "php -m" to check if openssl is inside the list
+    - if yes, move to step 8
+    - if no, that's a you problem
+
+8. Try executing index.php file

@@ -56,12 +56,12 @@ Register page password and re-enter password need to add condition
 
 Conditions can be added into Login page/script.js/
 _________________________________________________________________________________________________________________________________________________________________________________________________________________
-Create Register Page (Step 3)                                                                                                
+Create Register Page (Step 3)                                                                                     
 
 Make the database for user register page to store user input to the database
   - Connect the databse to the register page                                                            
 _________________________________________________________________________________________________________________________________________________________________________________________________________________
-Create Register Page (Step 4)                                                                                      
+Create Register Page (Step 4)                                                                                     Status: COMPLETED
 
 Improve Register Page UI
 _________________________________________________________________________________________________________________________________________________________________________________________________________________
@@ -75,11 +75,18 @@ Make the Cook Book page (step 1)                                                
 Make the cook book recipe using the "TheMealDB.api"
   - Create the cook book page using "TheMealDB.api"
 _________________________________________________________________________________________________________________________________________________________________________________________________________________
-Make the Cook Book page (step 2)                                                                                 Status: COMPLETED, Debugging:Wen
+Make the Cook Book page (step 2)                                                                                 Status: COMPLETED
 
 Make the cook book recipe using the "TheMealDB.api"
   - Make a code that will let you know which ingredient you are still missing
   - Separate the available ingrediant and missing ingredient
+
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
+Make the Cook Book page (step 3)                                                                                 Status: COMPLETED
+
+Make the cook book recipe using the "TheMealDB.api"
+  - Make a database using API
+    -Store ingredient 
 
 _________________________________________________________________________________________________________________________________________________________________________________________________________________  
 Make the Cook Book page (Improved)                                                                               Status: COMPLETED
@@ -100,6 +107,12 @@ Make the cook book recipe using the "TheMealDB.api"
   - current problem = after searching for the ingredient the search bar is at the bottom
     - Fix it, make it stay on top
     - Fix it, ingredient button stay on top
+
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
+Make the Cook Book page (Problem to fix)                                                                         Status: COMPLETED
+Make the cook book recipe using the "TheMealDB.api"
+  - current problem = ingredient button on click, it removed than reappear
+    - Fix it, ingredient button on click, remove it and update the page
 
 _________________________________________________________________________________________________________________________________________________________________________________________________________________
 Make the Cook Book page (Problem to fix)                                                                         Status: COMPLETED

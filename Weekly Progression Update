@@ -17,7 +17,6 @@ May 17
 
 May 24 goals
 add food search function                                           COMPLETE
-fix search ingredient bar to stay on top
 finish creating user login database
 finishing adding contidion to register page and login page        Work In Progress
 finish making missing ingredient input                            COMPLETE
@@ -26,3 +25,6 @@ Search bar function, follow by alphabetical order                 COMPLETE
 add Food recipe name                                              COMPLETE
 added ingredient list in ingredient book database                 COMPLETE
 Finish making login page and register page UI                     COMPLETE
+Make Databse for cook book using the "TheMealDB.api"              COMPLETE
+Fixed search bar and ingredient button to stay on top             COMPLETE
+Fixed ingredient button on click, remove it and update the page   COMPLETE
