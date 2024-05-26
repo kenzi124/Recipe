@@ -2,7 +2,9 @@
 include 'functions.php';
 $categories = fetchCategories();
 $enteredIngredients = isset($_POST['enteredIngredients']) ? json_decode($_POST['enteredIngredients'], true) : [];
+//If the add button is been pressed
 if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] == 'addIngredient') addIngredient($enteredIngredients, $categories);
+//If the user removed ingredients
 if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] == 'removeIngredient') removeIngredient($enteredIngredients);
 
 ?>
@@ -29,6 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] == 'removeIngredien
         <input type="hidden" name="enteredIngredients" value="<?php echo htmlspecialchars(json_encode($enteredIngredients)); ?>">
     </form>
 
+    <!-- Displaying ingredient as button -->
     <div id="ingredientButtons">
         <?php
         foreach($enteredIngredients as $index => $name) {
@@ -38,6 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] == 'removeIngredien
     </div>
 
     <?php
+    //If the search button is been pressed
     if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] == 'searchRecipes') fetchRecipes($enteredIngredients);
     ?>
     
