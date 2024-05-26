@@ -27,3 +27,4 @@ added ingredient list in ingredient book database                 COMPLETE
 Finish making login page and register page UI                     COMPLETE
 Make Databse for cook book using the "TheMealDB.api"              COMPLETE
 Fixed search bar and ingredient button to stay on top             COMPLETE
+Fixed ingredient button on click, remove it and update the page   COMPLETE
