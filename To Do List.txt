@@ -110,6 +110,12 @@ Make the cook book recipe using the "TheMealDB.api"
 
 _________________________________________________________________________________________________________________________________________________________________________________________________________________
 Make the Cook Book page (Problem to fix)                                                                         Status: COMPLETED
+Make the cook book recipe using the "TheMealDB.api"
+  - current problem = ingredient button on click, it removed than reappear
+    - Fix it, ingredient button on click, remove it and update the page
+
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
+Make the Cook Book page (Problem to fix)                                                                         Status: COMPLETED
 
 Make the cook book recipe using the "TheMealDB.api"
   - Current problem = id meal (Food name return back as id meal)
