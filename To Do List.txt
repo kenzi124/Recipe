@@ -147,7 +147,7 @@ Make the Cook Book page (step 5)                                                
 Make the cook book recipe using the "TheMealDB.api"
   - Use the Api to pull the image of the Food back along with the ingredient list
 _________________________________________________________________________________________________________________________________________________________________________________________________________________
-Make the Cook Book page (step 6)
+Make the Cook Book page (step 6)                                                                                 Work in Progress, Dani
 
 Improve Recipe Book Page UI
 _________________________________________________________________________________________________________________________________________________________________________________________________________________
