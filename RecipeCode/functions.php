@@ -29,6 +29,7 @@ function addIngredient(&$enteredIngredients, $categories) {
         return;
     //Check if the $userIngredient is one of the keywords inside $categories
     } else if (in_array(strtolower($userIngredient), array_map('strtolower', $categories))) {
+        $userIngredient = ucfirst(strtolower($userIngredient));
         if (!in_array($userIngredient, $enteredIngredients)) {
             $enteredIngredients[] = $userIngredient;
         }
@@ -70,7 +71,7 @@ function fetchRecipesByIngredient($ing, $enteredIngredients) {
                 $recipe = fetchIngredientsByIdMeal($idMeal);
                 //Get the name of the meal
                 $name = $recipe[1];
-                //Get the image of the meal
+                //Get the url image of the meal
                 $imgMeal = $recipe[2];
                 //Printing out the data
                 printRecipe($enteredIngredients, $recipe[0], $idMeal, $name, $imgMeal);
@@ -97,7 +98,7 @@ function fetchIngredientsByIdMeal($idMeal) {
             foreach ($data['meals'] as $meal) {
                 for ($i = 1; $i <= 20; $i++) { 
                     //Get the ingredient
-                    $ing = $meal['strIngredient' . $i];
+                    $ing = ucfirst($meal['strIngredient' . $i]);
                     if ($ing) {
                         $ings[] = $ing;
                     }
@@ -105,6 +106,7 @@ function fetchIngredientsByIdMeal($idMeal) {
             }
             //Get the name of the meal
             $nameMeal = $meal['strMeal'];
+            //Get the url of the image of the meal
             $imageMeal = $meal['strMealThumb'];
             return [$ings, $nameMeal, $imageMeal];
         } else {
@@ -122,15 +124,13 @@ function printRecipe($ings, $recipeIng, $id, $name, $img) {
         echo "Ingredients for idMeal {$id} {$name}: <br>";
         //Display the image of the meal
         echo "<img src='$img' alt='Recipe Image' style='max-width: 200px;'><br>";
-        foreach($ings as $ingre){
-            echo "$ingre <br>";
-        }
+        foreach($ings as $ingre) echo "$ingre <br>";
         printMissingIngredients($ings, $recipeIng);
         echo "<br>";
     }
 }
 
-//Check if array1 has all the string inside array2
+//Check if the user inputted ingredient is one of the existing ingredient of the website
 function isArraySubset($array1, $array2) {
     $lowerArray1 = array_map('strtolower', $array1);
     $lowerArray2 = array_map('strtolower', $array2);
@@ -146,7 +146,6 @@ function isArraySubset($array1, $array2) {
 function findMissingIngredients($recipeIngredients, $userIngredients) {
     $missingIngredients = array();
     foreach ($recipeIngredients as $ing) {
-        $ing = strtolower(trim($ing));
         if (!in_array($ing, $userIngredients)) {
             $missingIngredients[] = $ing;
         }
@@ -173,5 +172,4 @@ function printMissingIngredients($userIngredients, $recipeIngredients) {
         echo "Failed to fetch recipe ingredients.";
     }
 }
-
 ?>
