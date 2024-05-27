@@ -15,16 +15,41 @@ May 17
 - trying to fix the find ingredient to type on the top
 
 
-May 24 goals
-add food search function                                           COMPLETE
+May 17 - May 24 goals
+add food search function                                                                                  COMPLETE
 finish creating user login database
-finishing adding contidion to register page and login page        Work In Progress
-finish making missing ingredient input                            COMPLETE
-Scroll function on list of available ingredient                   COMPLETE
-Search bar function, follow by alphabetical order                 COMPLETE
-add Food recipe name                                              COMPLETE
-added ingredient list in ingredient book database                 COMPLETE
-Finish making login page and register page UI                     COMPLETE
-Make Databse for cook book using the "TheMealDB.api"              COMPLETE
-Fixed search bar and ingredient button to stay on top             COMPLETE
-Fixed ingredient button on click, remove it and update the page   COMPLETE
+finishing adding contidion to register page and login page                                                Work In Progress
+finish making missing ingredient input                                                                    COMPLETE
+Scroll function on list of available ingredient                                                           COMPLETE
+Search bar function, follow by alphabetical order                                                         COMPLETE
+add Food recipe name                                                                                      COMPLETE
+added ingredient list in ingredient book database                                                         COMPLETE
+Finish making login page and register page UI                                                             COMPLETE
+Make Databse for cook book using the "TheMealDB.api"                                                      COMPLETE
+Fixed search bar and ingredient button to stay on top                                                     COMPLETE
+Fixed ingredient button on click, remove it and update the page                                           COMPLETE
+
+
+
+
+May 24 - May 31 goals
+Pull image using the API "TheMealDB.api"                                                                  COMPLETE
+ingredient input auto correct/recognize the input                                                         COMPLETE
+Make a button to switch mode between ingredient recipe mode and food recipe mode                          Work In Progress
+finishing adding contidion to register page and login page                                                Work In Progress
+finish creating user login database
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
