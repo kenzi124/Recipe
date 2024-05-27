@@ -1,8 +1,5 @@
-<?php
-require __DIR__ . '/../src/bootstrap.php';
-?>
-
-<?php view('header', ['title' = '']) ?>
+<!DOCTYPE html>
+<html>
 <head>
     <title>Register</title>
     <link rel="stylesheet" href="style.css">
@@ -13,8 +10,8 @@ require __DIR__ . '/../src/bootstrap.php';
     <form id="registerForm" action="login.php" method="post">
         <h1>Register</h1>
         <div>
-            <label for="email">Email:</label>
-            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+            <label for="username">Username:</label>
+            <input type="text" placeholder="Enter Username" name="username" id="email" required>
         </div>
 
         <div>
@@ -26,10 +23,10 @@ require __DIR__ . '/../src/bootstrap.php';
         <div id="error-message" style="color:red; display:none;">Passwords do not match!</div>
         <section>
             <button type="button" id="registerButton">Create</button>
-            <p>Already have an account? <a href="login.html">Sign in</a>.</p>
+            <p>Already have an account? <a href="login.php">Sign in</a>.</p>
         </section>
+        <button id="lightModeToggle" class="btn">Light Mode</button>
     </form>
 </main>
 <script src="script.js"></script>
-
-<?php view('footer') ?>
+</html>
