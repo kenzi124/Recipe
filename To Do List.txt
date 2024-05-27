@@ -96,6 +96,12 @@ Search bar
   - When all ingredient show, add a scroll function to see all the ingredient with the key word search
 
 _________________________________________________________________________________________________________________________________________________________________________________________________________________
+Make the Cook Book page (Improved)                                                                               Status: COMPLETED
+
+ingredient input auto correct/recognize the input
+
+_________________________________________________________________________________________________________________________________________________________________________________________________________________
+
 Make the Cook Book page (Problem to fix)
 
 Fix the latency by using mySQL to retrieve the data and store in there
@@ -129,14 +135,14 @@ Make the cook book recipe using the "TheMealDB.api"
     - When button on click, the ingredient on their search of recipe will be remove
 
 _________________________________________________________________________________________________________________________________________________________________________________________________________________
-Make the Cook Book page (step 4)
+Make the Cook Book page (step 4)                                                                                 Work in Progress, Wen
 
 Make the cook book recipe using the "TheMealDB.api"
   - Make a button to switch mode between ingredient recipe mode and food recipe mode
     - recipe mode, able to add any ingredient you currently available and search for the recipe
     - food recipe mode, just enter the name of the food than it will return the recipe of the food
 _________________________________________________________________________________________________________________________________________________________________________________________________________________
-Make the Cook Book page (step 5)
+Make the Cook Book page (step 5)                                                                                 Status: COMPLETED
 
 Make the cook book recipe using the "TheMealDB.api"
   - Use the Api to pull the image of the Food back along with the ingredient list
