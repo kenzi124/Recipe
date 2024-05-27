@@ -1,3 +1,4 @@
+
 body.light-mode {
     background-color: #3CFFD0;
     color: black
@@ -11,6 +12,7 @@ body.light-mode {
 .light-mode input[type="text"],
 .light-mode input[type="password"]{
     background-color: #CAFFC2;
+    color: black;
 }
 
 .light-mode button {
@@ -48,4 +50,3 @@ body.light-mode {
     color: darkblue;
     font-family: Comic Sans MS;
 }
-
