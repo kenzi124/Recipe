@@ -76,41 +76,37 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 ?>
  
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="light-mode.css">
+    <link rel ="stylesheet" href="light-mode.css">
 </head>
-<body>
+
 <main>
-    <form action="login.php" method="post">
+    <form id="registerForm" action="login.php" method="post">
         <h1>Register</h1>
-        <br>
         <div>
-            <label for="email">Username:</label>
-            <input type="text" placeholder="Enter Username" name="email" id="email" required>
+            <label for="username">Username:</label>
+            <input type="text" placeholder="Enter Username" name="username" id="email" required>
         </div>
-        <br>
+
         <div>
             <label for="pwd">Password:</label>
             <input type="password" placeholder="Enter Password:" name="pwd" id="pwd" required>
-        </div>
-        <div>
             <label for="pwd2">Re-enter Password:</label>
             <input type="password" placeholder="Re-enter Password:" name="pwd2" id="pwd2" required>
         </div>
-        <br>
+        <div id="error-message" style="color:red; display:none;">Passwords do not match!</div>
         <section>
-            <button onclick="window.location.href='login.php'">Create</button>
+            <button type="button" id="registerButton">Create</button>
             <p>Already have an account? <a href="login.php">Sign in</a>.</p>
         </section>
         <button id="lightModeToggle" class="btn">Light Mode</button>
     </form>
-    <script src="script.js"></script>
 </main>
-</body>
+<script src="script.js"></script>
+</html>
+
 
 </html>
