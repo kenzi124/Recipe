@@ -68,9 +68,12 @@ function fetchRecipesByIngredient($ing, $enteredIngredients) {
                 $idMeal = $recipe['idMeal'];
                 //Getting the recipe
                 $recipe = fetchIngredientsByIdMeal($idMeal);
+                //Get the name of the meal
                 $name = $recipe[1];
+                //Get the image of the meal
+                $imgMeal = $recipe[2];
                 //Printing out the data
-                printIngredients($enteredIngredients, $recipe[0], $idMeal, $name);
+                printRecipe($enteredIngredients, $recipe[0], $idMeal, $name, $imgMeal);
             }
         } else {
             echo "No recipes found for the given ingredient.";
@@ -101,8 +104,9 @@ function fetchIngredientsByIdMeal($idMeal) {
                 }
             }
             //Get the name of the meal
-            $name = $meal['strMeal'];
-            return [$ings, $name];
+            $nameMeal = $meal['strMeal'];
+            $imageMeal = $meal['strMealThumb'];
+            return [$ings, $nameMeal, $imageMeal];
         } else {
             echo "No meal found for idMeal {$idMeal}.";
         }
@@ -112,10 +116,12 @@ function fetchIngredientsByIdMeal($idMeal) {
     return NULL;
 }
 
-//Print the ingredients
-function printIngredients($ings, $recipeIng, $id, $name) {
+//Print the data
+function printRecipe($ings, $recipeIng, $id, $name, $img) {
     if (isArraySubset($ings, $recipeIng)) {
         echo "Ingredients for idMeal {$id} {$name}: <br>";
+        //Display the image of the meal
+        echo "<img src='$img' alt='Recipe Image' style='max-width: 200px;'><br>";
         foreach($ings as $ingre){
             echo "$ingre <br>";
         }

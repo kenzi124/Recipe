@@ -50,6 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] == 'removeIngredien
         <input type="hidden" id="removedIngredient" name="removedIngredient" value="">
         <input type="hidden" name="enteredIngredients" value="<?php echo htmlspecialchars(json_encode($enteredIngredients)); ?>">
     </form>
+    <form metthod="post" id="ingredientMode" action="
     <?php
     ?>
 </body>
