@@ -51,12 +51,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="light-mode.css">
+	<link rel="stylesheet" type="text/css" href="light-mode.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-<main>
+<main class="form-container">
     <form action="login.php" method="post">
         <h1>Login</h1>
         <div>
