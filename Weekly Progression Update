@@ -17,7 +17,7 @@ May 17
 
 May 17 - May 24 goals
 add food search function                                                                                  COMPLETE
-finish creating user login database
+finish creating user login database                                                                       Work In Progress
 finishing adding contidion to register page and login page                                                Work In Progress
 finish making missing ingredient input                                                                    COMPLETE
 Scroll function on list of available ingredient                                                           COMPLETE
@@ -37,8 +37,8 @@ Pull image using the API "TheMealDB.api"                                        
 ingredient input auto correct/recognize the input                                                         COMPLETE
 Make a button to switch mode between ingredient recipe mode and food recipe mode                          Work In Progress
 finishing adding contidion to register page and login page                                                Work In Progress
-finish creating user login database
-
+finish creating user login database                                                                       Work In Progress
+show message error indicating (password and re-enter password is not the same)                            COMPLETE
 
 
 
