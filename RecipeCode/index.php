@@ -6,7 +6,6 @@ $enteredIngredients = isset($_POST['enteredIngredients']) ? json_decode($_POST['
 if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] == 'addIngredient') addIngredient($enteredIngredients, $categories);
 //If the user removed ingredients
 if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] == 'removeIngredient') removeIngredient($enteredIngredients);
-
 ?>
 
 <!DOCTYPE html>
