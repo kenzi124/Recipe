@@ -84,7 +84,7 @@ function fetchRecipesByIngredient($ing, $enteredIngredients) {
     }
 }
 
-//Getting the ingredients by id
+//Getting the recipe by id
 function fetchIngredientsByIdMeal($idMeal) {
     $url = "https://www.themealdb.com/api/json/v1/1/lookup.php?i={$idMeal}";
     $response = file_get_contents($url);
