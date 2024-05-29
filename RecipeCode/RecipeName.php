@@ -1,7 +1,3 @@
-<?php
-include 'functions.php';
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,6 +13,7 @@ include 'functions.php';
 </body>
 </html>
 <?php
+include 'functions.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve the recipe name from the form
     $name = $_POST['search'];
