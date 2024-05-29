@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] == 'removeIngredien
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Recipe Finder</title>
+    <title>Recipe Finder By Ingredients</title>
     <script src="script.js"></script>
 </head>
 <body>

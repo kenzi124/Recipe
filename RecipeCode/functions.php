@@ -1,4 +1,36 @@
 <?php
+//Getting recipe by name
+function fetchRecipesByName($name) {
+    $url = "https://www.themealdb.com/api/json/v1/1/search.php?s={$name}";
+    $response = file_get_contents($url);
+    if($response !== false) {
+        $data = json_decode($response, true);
+        if(isset($data['meals']) && !empty($data['meals'])){
+            foreach($data['meals'] as $recipe) {
+                $ings = []; // Initialize $ings array
+                for ($i = 1; $i <= 20; $i++) { 
+                    // Get the ingredient
+                    $ing = $recipe['strIngredient' . $i];
+                    if ($ing && !is_null($ing)) { // Check if the ingredient exists and is not null
+                        $ing = ucfirst($ing);
+                        $ings[] = $ing;
+                    }
+                }
+                $idMeal = $recipe['idMeal'];
+                $nameMeal = $recipe['strMeal'];
+                $imgMeal = $recipe['strMealThumb'];
+                printRecipe($ings, $idMeal, $nameMeal, $imgMeal);
+            }
+        } else {
+            echo "No meal found for {$name}";
+        }
+    } else {
+        echo "Failed to fetch data from MealDB API.";
+    }
+}
+
+
+
 //Getting available keywords of food ingredient
 function fetchCategories() {
     $url = "https://www.themealdb.com/api/json/v1/1/list.php?i=list";
@@ -12,6 +44,7 @@ function fetchCategories() {
             }
             return $categories;
         } else {
+            echo "My bad bro, no recipe with that name on my data. ¯\_(ツ)_/¯";
             return array();
         }
     } else {
@@ -74,7 +107,10 @@ function fetchRecipesByIngredient($ing, $enteredIngredients) {
                 //Get the url image of the meal
                 $imgMeal = $recipe[2];
                 //Printing out the data
-                printRecipe($enteredIngredients, $recipe[0], $idMeal, $name, $imgMeal);
+                if(isArraySubset($enteredIngredients, $recipe[0])); {
+                    printRecipe($enteredIngredients, $idMeal, $name, $imgMeal);
+                    printMissingIngredients($enteredIngredients, $recipe[0]);
+                }
             }
         } else {
             echo "No recipes found for the given ingredient.";
@@ -119,15 +155,12 @@ function fetchIngredientsByIdMeal($idMeal) {
 }
 
 //Print the data
-function printRecipe($ings, $recipeIng, $id, $name, $img) {
-    if (isArraySubset($ings, $recipeIng)) {
-        echo "Ingredients for idMeal {$id} {$name}: <br>";
-        //Display the image of the meal
-        echo "<img src='$img' alt='Recipe Image' style='max-width: 200px;'><br>";
-        foreach($ings as $ingre) echo "$ingre <br>";
-        printMissingIngredients($ings, $recipeIng);
-        echo "<br>";
-    }
+function printRecipe($ings, $id, $name, $img) {
+    echo "Ingredients for idMeal {$id} {$name}: <br>";
+    //Display the image of the meal
+    echo "<img src='$img' alt='Recipe Image' style='max-width: 200px;'><br>";
+    foreach($ings as $ingre) echo "$ingre <br>";
+    echo "<br>";
 }
 
 //Check if the user inputted ingredient is one of the existing ingredient of the website
