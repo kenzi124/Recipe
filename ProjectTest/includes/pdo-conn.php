@@ -1,5 +1,5 @@
 <?php 
-$dsn = "mysql:unix_socket=/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock;dbname=DatabaseTable";
+$dsn = "mysql:unix_socket=C:/xampp/mysql/mysql.sock;dbname=DatabaseTable";
 $dbusername = "root";
 $dbpassword = "";
 

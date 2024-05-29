@@ -1,12 +1,15 @@
 
 body.light-mode {
     background-color: #3CFFD0;
-    color: black
+    color: black;
 }
 
+/*not this*/
 .light-mode main{
     background-color:#F1F3F1;
     box-shadow: 15px 10px rgba(10, 50, 50, 0.3);
+    
+    
 }
 
 .light-mode input[type="text"],
