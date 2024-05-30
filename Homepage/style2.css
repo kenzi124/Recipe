@@ -25,9 +25,9 @@ main {
 .main-container {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Adjust the gap between the main elements as needed */
+    gap: 20px; 
     width: 100%;
-    margin-top: 20px; /* Adjust the spacing between header and main-container as needed */
+    margin-top: 20px; 
 }
 
 form {
