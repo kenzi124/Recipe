@@ -1,0 +1,62 @@
+body.light-mode2 {
+    background-color: #F5F5DC;
+    color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column ;
+    width: 100%;
+
+}
+.light-mode2 h1 {
+  color: black;
+}
+.light-mode2 main{
+    background-color: #D17C5C;
+    box-shadow: 15px 10px rgba(10, 30, 50, 0.2);
+}
+
+.light-mode2 input[type="text"],
+.light-mode2 input[type="password"]{
+    background-color: #CAFFC2;
+    color: black;
+}
+
+.light-mode2 button {
+    display: inline-block;
+    flex-direction: row;
+    width: 130px;
+    background-color: #F5F5DC;
+    color: #4C2415;
+    font-size: 20px;
+    font-family: Arial;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.light-mode2 button:hover {
+    background-color: White;
+    font-family: Comic Sans MS;
+}
+
+
+.light-mode2 a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #CAAFF1;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 1.2em;
+    font-family: Times New Roman;
+}
+
+.light-mode2 a:hover {
+    text-decoration: underline;
+    color: darkblue;
+    font-family: Comic Sans MS;
+}
