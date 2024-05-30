@@ -24,13 +24,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $pdo = null;
         $stmt = null;
 
-        // Redirect to the registration page
-        header("Location: ../register.php");
+        // Redirect to the login page in LoginPage Folder
+        header("Location: ../LoginPage/login.html");
         die();
     } catch (PDOException $e) {
         die("Query failed: " . $e->getMessage());
     }
 } else {
-    header("Location: ../register.php");
+    header("Location: ../LoginPage/login.html");
 }
 ?>

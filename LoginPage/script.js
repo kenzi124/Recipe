@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var errorMessage = document.getElementById('error-message');
 
             if (password === confirmPassword) {
-                errorMessage.style.display = 'none'; 
+                errorMessage.style.display = 'none';
             }
         });
     } else {
