@@ -16,9 +16,9 @@ if (lightModeToggle) {
     }
 
 document.getElementById('ingredSearch').addEventListener('click', function() {
-  window.location.href = 'ingredients.html';
+  window.location.href = '../RecipeCode/RecipeIngredients.php';
 });
 
 document.getElementById('dishSearch').addEventListener('click', function() {
-  window.location.href = 'dish.html';
+  window.location.href = '../RecipeCode/RecipeName.php';
 });
