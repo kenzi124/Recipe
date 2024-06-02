@@ -11,7 +11,8 @@ function fetchRecipesByName($name) {
                 for ($i = 1; $i <= 20; $i++) { 
                     // Get the ingredient
                     $ing = $recipe['strIngredient' . $i];
-                    if ($ing && !is_null($ing)) { // Check if the ingredient exists and is not null
+                    // Check if the ingredient exists and is not null
+                    if ($ing && !is_null($ing)) { 
                         $ing = ucfirst($ing);
                         $ings[] = $ing;
                     }
@@ -28,8 +29,6 @@ function fetchRecipesByName($name) {
         echo "Failed to fetch data from MealDB API.";
     }
 }
-
-
 
 //Getting available keywords of food ingredient
 function fetchCategories() {
