@@ -1,13 +1,17 @@
 <?php
-include 'functions.php';
-$categories = fetchCategories();
-$enteredIngredients = isset($_POST['enteredIngredients']) ? json_decode($_POST['enteredIngredients'], true) : [];
-//If the add button is been pressed
-if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] == 'addIngredient') addIngredient($enteredIngredients, $categories);
-//If the user removed ingredients
-if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] == 'removeIngredient') removeIngredient($enteredIngredients);
-?>
+session_start(); // Start session
 
+include 'config.php';
+include 'functions.php';
+include 'database.php';
+
+// Initialize categories
+$categories = initializeCategories($pdo);
+
+// Initialize entered ingredients
+$enteredIngredients = handleFormSubmission($categories); 
+?>
+ 
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,27 +31,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] == 'removeIngredien
             }
             ?>
         </datalist>
+
         <input type="hidden" name="enteredIngredients" value="<?php echo htmlspecialchars(json_encode($enteredIngredients)); ?>">
     </form>
 
     <!-- Displaying ingredient as button -->
     <div id="ingredientButtons">
         <?php
-        foreach($enteredIngredients as $index => $name) {
-            echo '<button type="button" id="button' . $index . '" onclick="removeButton(\'button' . $index . '\', \'' . $name . '\')">' . $name . '</button>';
+        if (!empty($enteredIngredients)) {
+            foreach ($enteredIngredients as $index => $name) {
+                echo '<button type="button" id="button' . $index . '" onclick="removeButton(\'button' . $index . '\', \'' . $name . '\')">' . $name . '</button>';
+            }
         }
         ?>
     </div>
 
-    <?php
-    //If the search button is been pressed
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] == 'searchRecipes') fetchRecipes($enteredIngredients);
-    ?>
-    
     <form method="post" id="removeIngredientForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <input type="hidden" name="action" value="removeIngredient">
         <input type="hidden" id="removedIngredient" name="removedIngredient" value="">
         <input type="hidden" name="enteredIngredients" value="<?php echo htmlspecialchars(json_encode($enteredIngredients)); ?>">
     </form>
+
+    <?php
+    // If the search button is pressed, display recipes
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['action'] == 'searchRecipes') {
+        fetchRecipes($enteredIngredients);
+    }
+    ?>
 </body>
 </html>
