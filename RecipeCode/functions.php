@@ -20,7 +20,8 @@ function handleFormSubmission(&$categories) {
 // Getting recipe by name
 function fetchRecipesByName($name) {
     if(empty($name)) {
-        echo "<div style='display: flex; justify-content: center; align-items: center; height: 100vh;'><img src='https://preview.redd.it/usuwpp1xiku71.png?auto=webp&s=16cc28d79da9cc27e81e5b6d0ce2d88793d12248' alt='Eating air image'><br>";
+        echo "<div style='display: flex; justify-content: center; align-items: center; height: 100vh;'>
+        <img src='https://preview.redd.it/usuwpp1xiku71.png?auto=webp&s=16cc28d79da9cc27e81e5b6d0ce2d88793d12248' alt='You broke image'><br>";
         return;
     }
     $url = "https://www.themealdb.com/api/json/v1/1/search.php?s={$name}";
