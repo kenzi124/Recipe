@@ -67,7 +67,7 @@
 
 <main>
     <!-- <form id="registerForm" action="../LoginPage/login.html" method="post"> -->
-    <form id="registerForm" action="includes/formhandler.inc.php" method="post">
+    <form id="registerForm" action="../Loginpage/login.html" method="post">
         <h1>Register</h1>
         <div>
             <label for="username">Username:</label>
