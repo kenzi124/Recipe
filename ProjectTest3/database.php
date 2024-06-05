@@ -13,9 +13,8 @@ function createUserTable($pdo) {
 }
 
 function storeUserData($pdo, $userData) {
-    try {
-        $stmt = $pdo->prepare("INSERT INTO users (")
-    }
+    $stmt = $pdo->prepare("INSERT INTO users (id, username, password) VALUES (:id, :username, :password)");
+
 }
 
 ?>

@@ -1,3 +1,7 @@
+<?php
+include 'includes/config.php';
+include 'includes/formhandler.inc.php';
+?>
 <!--
 <!DOCTYPE html>
 <html>
@@ -16,9 +20,6 @@
 </body>
 </html>
 -->
-
-
-
 <!--
 <!DOCTYPE html>
 <html>
@@ -67,7 +68,7 @@
 
 <main>
     <!-- <form id="registerForm" action="../LoginPage/login.html" method="post"> -->
-    <form id="registerForm" action="../Loginpage/login.html" method="post">
+    <form id="registerForm" action="includes/formhandler.inc.php" method="post">
         <h1>Register</h1>
         <div>
             <label for="username">Username:</label>

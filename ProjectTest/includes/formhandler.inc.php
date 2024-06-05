@@ -1,18 +1,15 @@
 <?php 
-
-echo '<a href="http://localhost/phpmyadmin" target="blank">Manage database with phpmyadmin</a><br>';
-
+include_once 'config.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $pwd = $_POST["pwd"];
 
-    try {
-        require_once "pdo-conn.php";  // Ensure this matches the actual file name
+    try{
+  // Ensure this matches the actual file name
         
         // Use named placeholders in the SQL query
-        $query = "INSERT INTO users (username, pwd) VALUES (:username, :pwd)";
 
-        $stmt = $pdo->prepare($query);
+        $stmt = $pdo->prepare("INSERT INTO users (username, pwd) VALUES (:username, :pwd)");
 
         // Bind the parameters to the placeholders
         $stmt->bindParam(":username", $username);
@@ -20,17 +17,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $stmt->execute();
 
-        // Close the database connections
-        $pdo = null;
-        $stmt = null;
-
-        // Redirect to the login page in LoginPage Folder
-        header("Location: ../LoginPage/login.html");
+        echo "Store data successfully.";
         die();
     } catch (PDOException $e) {
         die("Query failed: " . $e->getMessage());
     }
-} else {
-    header("Location: ../LoginPage/login.html");
 }
 ?>

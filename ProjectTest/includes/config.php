@@ -1,5 +1,5 @@
-<?php 
-$dsn = "mysql:host=C:/xampp/mysql/mysql.sock;dbname=data";
+<?php
+$dsn = "mysql:unix_socket=/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock;dbname=DatabaseTable";
 $dbusername = "root";
 $dbpassword = "";
 
@@ -10,5 +10,6 @@ try {
     echo "Connection successful!<br>";
 } catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
+    die("<br>Oops! Something went wrong. Please try again later.");
 }
 ?>
