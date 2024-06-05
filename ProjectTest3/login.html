@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+	<link rel="stylesheet" type="text/CSS" href="light-mode.css">
+    <link rel="stylesheet" type="text/CSS" href="style.css">
+</head>
+
+<body>
+<main class="form-container">
+    <form action="login.php" method="post">
+        <h1>Login</h1>
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" placeholder="Enter Username:" name="username" id="username" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" placeholder="Enter Password:" name="password" id="password" required>
+        </div>
+        <br>
+        <button type="submit"><a href="../RecipeCode/RecipeIngredients.php">Login</a></button>
+        <br>
+        <a href="https://gifdb.com/images/high/that-s-crazy-damn-bro-0qrzc1wo0rpyzwq2.gif">Forgot your password?</a>
+        <br>
+        <br>
+        <a href="../ProjectTest/register.php">Register</a>
+        <br>
+        <br>
+        <button id="lightModeToggle" class="btn">Light Mode</button>
+    </form>
+    <script src="script.js"></script>
+</main>
+</body>
+
+</html>

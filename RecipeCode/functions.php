@@ -26,25 +26,32 @@ function fetchRecipesByName($name) {
     }
     $url = "https://www.themealdb.com/api/json/v1/1/search.php?s={$name}";
     $response = file_get_contents($url);
-    if ($response !== false) {
+    if ($response) {
         $data = json_decode($response, true);
         if (isset($data['meals']) && !empty($data['meals'])) {
             foreach ($data['meals'] as $recipe) {
-                $ings = []; // Initialize $ings array
-                for ($i = 1; $i <= 20; $i++) { 
+                for ($i = 1; $i <= 20; $i++) {
                     // Get the ingredient
                     $ing = $recipe['strIngredient' . $i];
-                    // Check if the ingredient exists and is not null
-                    if ($ing && !is_null($ing)) { 
-                        $ing = ucfirst($ing);
-                        $ings[] = $ing;
+                    // Check if the ingredient is not empty before calling ucfirst()
+                    if (!empty($ing)) {
+                        $ings[] = ucfirst($ing);
                     }
                 }
                 $idMeal = $recipe['idMeal'];
-                $nameMeal = $recipe['strMeal'];
+                // Get the name of the meal
+                $name = $recipe['strMeal'];
+                // Get the url image of the meal
                 $imgMeal = $recipe['strMealThumb'];
-                printRecipe($ings, $idMeal, $nameMeal, $imgMeal);
+                // Store the recipe in the array
+                $recipes[] = [
+                    'ingredients' => $ings,
+                    'id' => $idMeal,
+                    'name' => $name,
+                    'image' => $imgMeal
+                ];
             }
+            printStoredRecipes2($recipes);
         } else {
             echo "No meal found for {$name}";
         }
@@ -192,7 +199,7 @@ function fetchIngredientsByIdMeal($idMeal) {
 }
 
 // Print the stored recipes
-function printStoredRecipes($userIngredients, $recipes) {
+function printStoredRecipes1($userIngredients, $recipes) {
     // Print the user's entered ingredients
     echo "Your entered ingredients:<br>";
     if(empty($userIngredients)) {
@@ -211,6 +218,18 @@ function printStoredRecipes($userIngredients, $recipes) {
         echo "<img src='{$recipe['image']}' alt='Recipe Image' style='max-width: 200px;'><br>";
         // Print missing ingredients for this recipe
         printMissingIngredients($userIngredients, $recipe['ingredients']);
+    }
+}
+
+function printStoredRecipes2($recipes) {
+    foreach($recipes as $recipe) {
+        echo "<br>Ingredients for idMeal {$recipe['id']} {$recipe['name']}:<br>";
+        // Display the image of the meal
+        echo "<img src='{$recipe['image']}' alt='Recipe Image' style='max-width: 200px;'><br>";
+        // Display ingredients
+        foreach($recipe['ingredients'] as $ing) {
+            echo "-$ing<br>";
+        }
     }
 }
 

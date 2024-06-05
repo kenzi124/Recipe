@@ -1,0 +1,55 @@
+
+body.light-mode {
+    background-color: #3CFFD0;
+    color: black;
+}
+
+/*not this*/
+.light-mode main{
+    background-color:#F1F3F1;
+    box-shadow: 15px 10px rgba(10, 50, 50, 0.3);
+    
+    
+}
+
+.light-mode input[type="text"],
+.light-mode input[type="password"]{
+    background-color: #CAFFC2;
+    color: black;
+}
+
+.light-mode button {
+    display: inline-block;
+    flex-direction: row;
+    width: 130px;
+    background-color: #49D477;
+    color: #fff;
+    font-size: 20px;
+    font-family: Arial;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.light-mode button:hover {
+    background-color: red;
+    font-family: Comic Sans MS;
+}
+
+
+.light-mode a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #CAAFF1;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 1.2em;
+    font-family: Times New Roman;
+}
+
+.light-mode a:hover {
+    text-decoration: underline;
+    color: darkblue;
+    font-family: Comic Sans MS;
+}
