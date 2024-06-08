@@ -10,3 +10,8 @@ function removeButton(buttonId, ingredient) {
     //Submit the form to trigger the removal in PHP
     document.getElementById('removeIngredientForm').submit();
 }
+
+//Function to create and display meal details on popup
+function showMealDetailsPopup(meal) {
+
+}
