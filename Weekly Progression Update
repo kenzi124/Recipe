@@ -46,8 +46,12 @@ June 1 - June 7 Goals
 Slightly faster search time                                                                              Work In Progress
 fixed ingredient search(before each ingredient input will search up than search another recipe.          COMPLETE
 now search overall ingredient search)
-Make Recipe Page UI                                                                                       Work In Progress
-
+Make Recipe Page UI                                                                                      Work In Progress
+Fixed login page database                                                                                COMPLETE
+Window friendly                                                                                          COMPLETE
+added log out button                                                                                     COMPLETE
+insert user data succesfully                                                                             COMPLETE
+use hash password for protection                                                                         COMPLETE
 
 
 
