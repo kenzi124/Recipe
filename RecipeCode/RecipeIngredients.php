@@ -16,7 +16,7 @@ $enteredIngredients = handleFormSubmission($categories);
 <html>
 <head>
     <title>Recipe Finder By Ingredients</title>
-    <script src="script3.js"></script>
+    <script src="script4.js"></script>
     <link rel="stylesheet" href="style4.css">
     <link rel ="stylesheet" href="light-mode4.css">
 </head>
