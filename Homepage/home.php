@@ -26,7 +26,7 @@
     </div>
     <br>
     <button type="button" id="lightModeToggle" class="btn">Light Mode</button>
-    <a href="../ProjectTest/logout.php">Logout</a>
+    <a href="../LoginPage/logout.php">Logout</a>
     <script src="script2.js"></script>
   </body>
 </html>
