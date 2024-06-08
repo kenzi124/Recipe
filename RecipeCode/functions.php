@@ -30,6 +30,7 @@ function fetchRecipesByName($name) {
         $data = json_decode($response, true);
         if (isset($data['meals']) && !empty($data['meals'])) {
             foreach ($data['meals'] as $recipe) {
+                $ings = [];
                 for ($i = 1; $i <= 20; $i++) {
                     // Get the ingredient
                     $ing = $recipe['strIngredient' . $i];
@@ -223,15 +224,21 @@ function printStoredRecipes1($userIngredients, $recipes) {
 
 function printStoredRecipes2($recipes) {
     foreach($recipes as $recipe) {
-        echo "<br>Ingredients for idMeal {$recipe['id']} {$recipe['name']}:<br>";
+        echo "<div>";
+        echo "<h3>Ingredients for {$recipe['name']}:</h3>";
         // Display the image of the meal
         echo "<img src='{$recipe['image']}' alt='Recipe Image' style='max-width: 200px;'><br>";
         // Display ingredients
+        echo "<ul>";
         foreach($recipe['ingredients'] as $ing) {
-            echo "-$ing<br>";
+            echo "<li>$ing</li>";
         }
+        echo "</ul>";
+        echo "</div>";
     }
 }
+
+
 
 // Check if the user inputted ingredient is one of the existing ingredient of the website
 function isArraySubset($array1, $array2) {
