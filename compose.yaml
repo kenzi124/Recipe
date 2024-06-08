@@ -1,0 +1,31 @@
+services:
+  server:
+    build:
+      context: .
+    ports:
+      - 80:80
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'test'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'billybob'
+      MYSQL_ROOT_PASSWORD: 'billybob'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - my-db:/var/lib/mysql
+      - ./setup.sql:/tmp/database/setup.sql
+    command: --init-file="/tmp/database/setup.sql"
+    healthcheck:
+      test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
+      timeout: 120s
+      retries: 60
+volumes:
+  my-db:
