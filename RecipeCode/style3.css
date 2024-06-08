@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.5s ease, color 0.5s ease; 
+}
+
+.btmright {
+    position: fixed;
+    top: 93%;
+    left: 92%;
+    opacity: 0.5;
+    background-color: grey;
+    font-size: 20px;
+    padding: 10px;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://wallpapers-clan.com/wp-content/uploads/2024/04/jujutsu-kaisen-sukuna-pink-desktop-wallpaper-preview.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.4; 
+    z-index: -1;
+    pointer-events: none;
+    transition: opacity 0.5s ease; 
+}
+
+main {
+    background-color: #333;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: background-color 0.5s ease; 
+}
+
+h1 {
+    margin-top: 0;
+    font-family: Times New Roman;
+    font-size: 40px;
+}
+
+div {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    font-family: Times New Roman;
+    font-size: 40px;
+}
+
+input[type="text"] {
+    padding: 12px;
+    border-radius: 16px;
+    border: 2px solid #555;
+    background-color: gray;
+    color: #fff;
+    width: 100%;
+    transition: background-color 0.5s ease, color 0.5s ease; 
+}
+
+input[type="password"] {
+    padding: 4px;
+    border-radius: 4px;
+    border: 2px solid #555;
+    background-color: gray;
+    color: #fff;
+    width: 100%;
+    transition: background-color 0.5s ease, color 0.5s ease; 
+}
+
+button {
+    display: inline-block;
+    flex-direction: row;
+    width: 130px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    font-size: 30px;
+    font-family: Arial;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+button:hover {
+    background-color: darkblue;
+    font-family: Comic Sans MS;
+}
+
+a {
+    text-decoration: none;
+    color: #CAAFF1;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 1.2em;
+    font-family: Times New Roman;
+    transition: color 0.5s ease; 
+}
+
+a:hover {
+    text-decoration: underline;
+    color: lightblue;
+    font-family: Comic Sans MS;
+}
