@@ -116,7 +116,7 @@ function fetchRecipes($enteredIngredients) {
     foreach ($enteredIngredients as $ingredient) {
         $recipes = array_merge($recipes, fetchRecipesByIngredient($ingredient, $enteredIngredients, $recipes));
     }
-    printStoredRecipes($enteredIngredients,$recipes); // Print the stored recipes
+    printStoredRecipes1($enteredIngredients,$recipes); // Print the stored recipes
 }
 
 // Getting all the recipes and storing them in a multidimensional array

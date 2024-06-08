@@ -3,10 +3,10 @@ session_start(); // Start session
 
 include 'config.php';
 include 'functions.php';
-include 'database.php';
+//include 'database.php';
 
 // Initialize categories
-$categories = initializeCategories($pdo);
+$categories = fetchCategories();
 
 // Initialize entered ingredients
 $enteredIngredients = handleFormSubmission($categories); 
