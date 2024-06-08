@@ -22,40 +22,17 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.remove('light-mode');
         }
     }
-
-    // Registration Form Validation
-    const registerButton = document.getElementById('registerButton');
-    if (registerButton) {
-        console.log('Register button found'); 
-
-        registerButton.addEventListener('click', function() {
-            console.log('Register button clicked'); 
-
-            var password = document.getElementById('pwd').value;
-            var confirmPassword = document.getElementById('pwd2').value;
-            var errorMessage = document.getElementById('error-message');
-
-            if (password === confirmPassword) {
-                console.log('Passwords match'); 
-                errorMessage.style.display = 'none'; 
-                document.getElementById('registerForm').submit();
-            } else {
-                console.log('Passwords do not match'); 
-                errorMessage.style.display = 'block'; 
-            }
-        });
-
-        // Additional event listener to clear the error message if passwords match
-        document.getElementById('pwd2').addEventListener('input', function() {
-            var password = document.getElementById('pwd').value;
-            var confirmPassword = document.getElementById('pwd2').value;
-            var errorMessage = document.getElementById('error-message');
-
-            if (password === confirmPassword) {
-                errorMessage.style.display = 'none';
-            }
-        });
-    } else {
-        console.error('Register button not found');
-    }
 });
+
+function validateForm() {
+    var pwd = document.getElementById("pwd").value;
+    var pwd2 = document.getElementById("pwd2").value;
+    var errorMessage = document.getElementById("error-message");
+
+    if (pwd !== pwd2) {
+        errorMessage.style.display = "block";
+        return false;
+    }
+    errorMessage.style.display = "none";
+    return true;
+}

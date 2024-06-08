@@ -11,15 +11,15 @@ if(isset($_SESSION["user"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel ="stylesheet" href="light-mode.css">
+    <link rel="stylesheet" href="../LoginPage/style.css">
+    <link rel ="stylesheet" href="../LoginPage/light-mode.css">
 </head>
 
 <body>
 <main class="form-container">
     <?php 
     if(isset($_POST["login"])) {
-        include 'includes/formhandler.php';
+        include 'includes/formhandler.inc.php';
         checkUser();
     }
     ?>
@@ -39,7 +39,7 @@ if(isset($_SESSION["user"])) {
         <a href="https://gifdb.com/images/high/that-s-crazy-damn-bro-0qrzc1wo0rpyzwq2.gif">Forgot your password?</a>
         <br>
         <br>
-        <a href="register.php">Register</a>
+        <a href="../ProjectTest/register.php">Register</a>
         <br>
         <br>
         <button id="lightModeToggle" class="btn">Light Mode</button>
@@ -47,4 +47,5 @@ if(isset($_SESSION["user"])) {
     <script src="script.js"></script>
 </main>
 </body>
+
 </html>
