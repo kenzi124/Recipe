@@ -1,7 +1,7 @@
 <?php
 session_start(); // Start session
 
-include 'config.php';
+//include 'config.php';
 include 'functions.php';
 //include 'database.php';
 
@@ -16,7 +16,9 @@ $enteredIngredients = handleFormSubmission($categories);
 <html>
 <head>
     <title>Recipe Finder By Ingredients</title>
-    <script src="script.js"></script>
+    <script src="script3.js"></script>
+    <link rel="stylesheet" href="style4.css">
+    <link rel ="stylesheet" href="light-mode4.css">
 </head>
 <body>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
@@ -58,5 +60,6 @@ $enteredIngredients = handleFormSubmission($categories);
         fetchRecipes($enteredIngredients);
     }
     ?>
+    <button type="button" id="lightModeToggle" class="btmright">Light Mode</button>
 </body>
 </html>
