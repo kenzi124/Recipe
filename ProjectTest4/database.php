@@ -10,6 +10,10 @@ function createCategoriesTable($pdo) {
     )");
 }
 
+
+
+
+
 function storeCategoriesInDB($pdo, $categories) {
     try {
         $stmt = $pdo->prepare("INSERT INTO categories (ingredient) VALUES (:name)");

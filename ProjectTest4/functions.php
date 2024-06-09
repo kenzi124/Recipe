@@ -29,40 +29,30 @@ function fetchRecipesByName($name) {
     if ($response) {
         $data = json_decode($response, true);
         if (isset($data['meals']) && !empty($data['meals'])) {
-            echo "<script>let recipes = [];</script>";
+            echo "<div id='recipeContainer'>";
             foreach ($data['meals'] as $recipe) {
                 $ings = [];
                 for ($i = 1; $i <= 20; $i++) {
-                    // Get the ingredient
                     $ing = $recipe['strIngredient' . $i];
-                    // Check if the ingredient is not empty before calling ucfirst()
                     if (!empty($ing)) {
                         $ings[] = ucfirst($ing);
                     }
                 }
                 $idMeal = $recipe['idMeal'];
-                // Get the name of the meal
                 $name = $recipe['strMeal'];
-                // Get the url image of the meal
                 $imgMeal = $recipe['strMealThumb'];
-                // Store the recipe in the array
-                $recipes[] = [
+                $recipeObj = [
                     'ingredients' => $ings,
                     'id' => $idMeal,
                     'name' => $name,
                     'image' => $imgMeal
                 ];
-
-                // Add the recipe to the JavaScript array
-                $json_recipe = json_encode([
-                    'ingredients' => $ings,
-                    'id' => $idMeal,
-                    'name' => $name,
-                    'image' => $imgMeal
-                ]);
-                echo "<script>recipes.push($json_recipe);</script>";
+                echo "<div class='recipe-card' onclick='showPopup(".json_encode($recipeObj).")'>";
+                echo "<img src='{$imgMeal}' alt='Recipe Image'>";
+                echo "<h3>{$name}</h3>";
+                echo "</div>";
             }
-            echo "<script>displayRecipes(recipes);</script>";
+            echo "</div>";
         } else {
             echo "No meal found for {$name}";
         }
@@ -70,8 +60,6 @@ function fetchRecipesByName($name) {
         echo "Failed to fetch data from MealDB API.";
     }
 }
-
-
 
 // Getting available keywords of food ingredient
 function fetchCategories() {
@@ -129,7 +117,7 @@ function fetchRecipes($enteredIngredients) {
     foreach ($enteredIngredients as $ingredient) {
         $recipes = array_merge($recipes, fetchRecipesByIngredient($ingredient, $enteredIngredients, $recipes));
     }
-    printStoredRecipes($enteredIngredients,$recipes); // Print the stored recipes
+    printStoredRecipes1($enteredIngredients,$recipes); // Print the stored recipes
 }
 
 // Getting all the recipes and storing them in a multidimensional array
@@ -236,13 +224,17 @@ function printStoredRecipes1($userIngredients, $recipes) {
 
 function printStoredRecipes2($recipes) {
     foreach($recipes as $recipe) {
-        echo "<br>Ingredients for idMeal {$recipe['id']} {$recipe['name']}:<br>";
+        echo "<div class='recipe-container'>";
+        echo "<h3>Ingredients for {$recipe['name']}:</h3>";
         // Display the image of the meal
         echo "<img src='{$recipe['image']}' alt='Recipe Image' style='max-width: 200px;'><br>";
         // Display ingredients
+        echo "<ul>";
         foreach($recipe['ingredients'] as $ing) {
-            echo "-$ing<br>";
+            echo "<li>$ing</li>";
         }
+        echo "</ul>";
+        echo "</div>";
     }
 }
 
