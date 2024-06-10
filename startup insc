@@ -3,6 +3,7 @@
 1.Install software if not yet installed
   sudo apt update
   sudo apt install git apache2 -y
+  apt-get install -y apache2 php mariadb-server git php-mysql
 2.Clone the Github repository, preferably in the root directory of the webserver
   cd /var/www/html/
   sudo git clone https://github.com/kenzi124/Recipe
