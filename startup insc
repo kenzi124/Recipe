@@ -1,0 +1,23 @@
+
+
+1.Install software if not yet installed
+  sudo apt update
+  sudo apt install git apache2 -y
+2.Clone the Github repository, preferably in the root directory of the webserver
+  cd /var/www/html/
+  sudo git clone https://github.com/kenzi124/Recipe
+2.5.After cloning, make sure you are on the correct branch of the repository
+  git checkout main (Can be any branch)
+3.Set up the web server
+  sudo nano /etc/apache2/sites-available/000-default.conf
+3.5.Once you open up the conf file, find a line "DocumentRoot /var/www/html/", replace it with
+  DocumentRoot /var/www/html/Recipe
+3.6.Save the file and exit
+4.Adjust the permissions, make sure the webserver has the correct permissions to read the files
+  sudo chown -R www-data:www-data /var/www/html/Recipe
+5.Restart Apache2 to apply the changes
+  sudo systemctl restart apache2
+6.Website should be accessible now, check your IP
+  hostname -I
+
+
